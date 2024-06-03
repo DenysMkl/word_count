@@ -2,8 +2,7 @@ name: CheckLength
 
 on:
   pull_request:
-    branches:
-      - '*'
+    branches: ['main', 'feature/implement-counter']
 jobs:
   build:
 
