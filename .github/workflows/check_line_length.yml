@@ -30,7 +30,5 @@ jobs:
         flake8 . --count --select=E501 --max-complexity=10 --max-doc-length=72 --statistics
     - name: Run pytest
       run: |
-        coverage run -m pytest  -v -s
-    - name: Generate Coverage Report
-      run: |
-        coverage report -m
+        pytest  -v -s
+        pytest --cov=app --cov-fail-under=90
