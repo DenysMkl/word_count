@@ -4,15 +4,14 @@ import pytest
 
 
 @pytest.fixture()
-def mock_open_file():
-    mock = mock_open(read_data='hello world hello')
+def mock_open_file_with_data():
+    mock = mock_open(read_data='hello\n\n\n world hello')
     with patch('builtins.open', mock):
         yield mock
 
 
 @pytest.fixture()
-def mock_error_file():
-    mock = mock_open()
-    mock.return_value.read.side_effect = IOError("Unable to read file")
+def mock_open_empty_file():
+    mock = mock_open(read_data='')
     with patch('builtins.open', mock):
         yield mock

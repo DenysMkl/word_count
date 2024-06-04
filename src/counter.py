@@ -15,7 +15,7 @@ class ContextManager:
         return data
 
 
-def count_words(filename='file.txt'):
+def count_words(filename):
     with ContextManager(filename) as file:
         text_of_words = file.read_file()
         list_of_words = text_of_words.split()
@@ -25,7 +25,3 @@ def count_words(filename='file.txt'):
             dict_word_count.update({word: count_of_word})
 
     return dict_word_count
-
-
-if __name__ == '__main__':
-    print(count_words())
