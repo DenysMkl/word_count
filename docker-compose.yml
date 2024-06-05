@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  counter:
+    image: counter-image:latest
+    container_name: text-counter
+    ports:
+      - '8001:8001'
