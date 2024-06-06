@@ -44,7 +44,6 @@ git clone https://github.com/DenysMkl/word_count.git
        ```
     * On Windows
        ```
-       cd src
        python src/counter.py
        ```
 5. Run tests

@@ -38,4 +38,4 @@ def count_words(filename):
 
 
 if __name__ == '__main__':
-    print(count_words('text.txt'))
+    print(count_words('src/text.txt'))
